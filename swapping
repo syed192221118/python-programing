@@ -1,0 +1,11 @@
+
+y = 50
+ 
+
+# Using third variable
+temp = x
+x = y
+y = temp
+ 
+print("Value of x:", x)
+print("Value of y:", y)

@@ -1,0 +1,17 @@
+def print_pattern():
+    # Maximum value to print
+    max_value = 0.4
+    increment = 0.1
+    
+    # Loop through the range and print the pattern
+    current = increment
+    while current <= max_value:
+        value = increment
+        while value <= current:
+            print(f"{value:.1f}", end=" ")
+            value += increment
+        print()  # Print a new line
+        current += increment
+
+# Call the function to print the pattern
+print_pattern()

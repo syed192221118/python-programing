@@ -1,0 +1,6 @@
+list = [2, 3, 5, 7]
+
+# reverse the order of list elements
+list.reverse()
+
+print('Reversed List:', list)

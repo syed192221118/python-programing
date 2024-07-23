@@ -1,0 +1,30 @@
+# Example tuples
+tuple1 = (5, 10, 15, 20, 25)
+tuple2 = (30, 35, 40, 45, 50)
+
+# i) Maximum and Minimum
+max_value = max(tuple1)
+min_value = min(tuple1)
+
+print("Maximum value in tuple1:", max_value)
+print("Minimum value in tuple1:", min_value)
+
+# ii) Sum of Two Tuples
+tuple_sum = tuple(a + b for a, b in zip(tuple1, tuple2))
+
+print("Sum of tuple1 and tuple2:", tuple_sum)
+
+# iii) Duplicate a Tuple
+duplicate_tuple = tuple1 * 2
+
+print("Duplicated tuple1:", duplicate_tuple)
+
+# iv) Slicing Operator
+sliced_tuple = tuple1[1:4]
+
+print("Sliced tuple1 (elements from index 1 to 3):", sliced_tuple)
+
+# v) Obtaining a List from a Tuple
+tuple_to_list = list(tuple1)
+
+print("List obtained from tuple1:", tuple_to_list)

@@ -1,0 +1,29 @@
+class Employee:
+    def __init__(self, name, basic_salary, hra, da, cca):
+        self.name = name
+        self.basic_salary = basic_salary
+        self.hra = hra
+        self.da = da
+        self.cca = cca
+    
+    def calculate_salary(self):
+        return self.basic_salary + self.hra + self.da + self.cca
+
+# Function to get employee details from user
+def get_employee_details(employee_number):
+    name = input(f"Enter the name of employee {employee_number}: ")
+    basic_salary = float(input(f"Enter the basic salary for {name}: "))
+    hra = float(input(f"Enter the HRA for {name}: "))
+    da = float(input(f"Enter the DA for {name}: "))
+    cca = float(input(f"Enter the CCA for {name}: "))
+    return Employee(name, basic_salary, hra, da, cca)
+
+# Get details for three employees
+employee1 = get_employee_details(1)
+employee2 = get_employee_details(2)
+employee3 = get_employee_details(3)
+
+# Calculate and print salary for each employee
+print(f"Total salary of {employee1.name}: {employee1.calculate_salary()}")
+print(f"Total salary of {employee2.name}: {employee2.calculate_salary()}")
+print(f"Total salary of {employee3.name}: {employee3.calculate_salary()}")

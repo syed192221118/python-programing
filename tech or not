@@ -1,0 +1,18 @@
+number = int(input("Enter a number: "))
+
+str_num = str(number)
+
+if len(str_num) % 2 == 0:
+   
+    mid = len(str_num) // 2
+    
+    
+    first_half = int(str_num[:mid])
+    second_half = int(str_num[mid:])
+    
+        if (first_half + second_half) ** 2 == number:
+        print(f"{number} is a Tech number")
+    else:
+        print(f"{number} is not a Tech number")
+else:
+    print(f"{number} is not a Tech number")

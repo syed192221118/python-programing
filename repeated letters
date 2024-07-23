@@ -1,0 +1,21 @@
+
+word = input("Enter the word: ").upper()  
+letter_count = {}
+
+
+for letter in word:
+    if letter.isalpha():  
+        if letter in letter_count:
+            letter_count[letter] += 1
+        else:
+            letter_count[letter] = 1
+
+
+repeated_letters = [letter for letter, count in letter_count.items() if count > 1]
+
+
+print(f"Number of repeated letters = {len(repeated_letters)}")
+if repeated_letters:
+    print(f"Repeated letter(s) = {', '.join(repeated_letters)}")
+else:
+    print("No repeated letters")

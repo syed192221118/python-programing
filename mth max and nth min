@@ -1,0 +1,28 @@
+array = [15, 19, 34, 56, 12]
+M = 4  
+N = 3  
+
+
+sorted_array = sorted(array)
+
+
+mth_max = sorted_array[-M] if M <= len(sorted_array) else None
+
+
+nth_min = sorted_array[N-1] if N <= len(sorted_array) else None
+
+
+if mth_max is None:
+    print(f"Error: M is {M} but there are only {len(sorted_array)} elements in the array.")
+elif nth_min is None:
+    print(f"Error: N is {N} but there are only {len(sorted_array)} elements in the array.")
+else:
+    
+    sum_result = mth_max + nth_min
+    diff_result = mth_max - nth_min
+
+    
+    print("Mth maximum number:", mth_max)
+    print("Nth minimum number:", nth_min)
+    print("Sum:", sum_result)
+    print("Difference:", diff_result)

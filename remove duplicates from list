@@ -1,0 +1,6 @@
+my_list = [1, 2, 3, 4, 2, 3, 5, 6, 1]
+
+unique_list = list(set(my_list))
+
+print("Original List:", my_list)
+print("List with duplicates removed:", unique_list)

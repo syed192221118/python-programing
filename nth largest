@@ -1,0 +1,12 @@
+def find_nth_largest(lst, n):
+    # Sort the list in descending order
+    lst.sort(reverse=True)
+    
+    # Return the Nth largest element
+    return lst[n-1]
+
+# Example usage
+numbers = [5, 3, 8, 4, 2, 7, 6, 1]
+n = 3
+nth_largest = find_nth_largest(numbers, n)
+print(f"The {n}rd largest number in the list is: {nth_largest}")

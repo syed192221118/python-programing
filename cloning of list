@@ -1,0 +1,7 @@
+x = [10,20,30,40,50]
+y = x[:] #x is cloned as y
+print(x) #will display [10,20,30,40,50]
+print(y) #will display [10,20,30,40,50]
+x[1] = 99 #modify 1st element in x
+print(x) #will display [10,99,30,40,50]
+print(y) #will display [10,20,30,40,50]

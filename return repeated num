@@ -1,0 +1,10 @@
+nums = [1, 3, 4, 2, 2]
+duplicates = []
+
+for i in nums:
+    if nums.count(i) > 1:
+        duplicates.append(i)
+
+duplicates = list(set(duplicates))
+
+print(duplicates)  

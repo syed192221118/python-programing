@@ -1,0 +1,39 @@
+def write_to_file(file_name, content):
+    try:
+        with open(file_name, 'w') as file:
+            file.write(content)
+        print(f'Written to {file_name} successfully.')
+    except IOError:
+        print(f'Error writing to {file_name}.')
+
+def read_from_file(file_name):
+    try:
+        with open(file_name, 'r') as file:
+            content = file.read()
+            print(f'Content of {file_name}:')
+            print(content)
+    except IOError:
+        print(f'Error reading from {file_name}.')
+
+def update_file(file_name, new_content):
+    try:
+        with open(file_name, 'a') as file:
+            file.write(new_content)
+        print(f'Updated {file_name} successfully.')
+    except IOError:
+        print(f'Error updating {file_name}.')
+
+# Example usage:
+file_name = 'example.txt'
+
+# Writing to file
+write_to_file(file_name, "Hello, this is a test content.\n")
+
+# Reading from file
+read_from_file(file_name)
+
+# Updating file
+update_file(file_name, "Appending new content.\n")
+
+# Reading updated file
+read_from_file(file_name)

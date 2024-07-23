@@ -1,0 +1,14 @@
+array = [15, 14, 25, 14, 32, 14, 31]
+
+array.sort()
+
+count_dict = {}
+for num in array:
+    if num in count_dict:
+        count_dict[num] += 1
+    else:
+        count_dict[num] = 1
+
+unique_elements = [num for num in array if count_dict[num] == 1]
+
+print("Sorted Array =", unique_elements)

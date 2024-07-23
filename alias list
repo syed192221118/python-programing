@@ -1,0 +1,9 @@
+	
+x = [10,20,30,40,50] 
+y = x #x is aliased as y 
+print(x) #will display [10,20,30,40,50] 
+print(y) #will display [10,20,30,40,50]
+x[1]= 35
+print(x)
+print(y)
+        

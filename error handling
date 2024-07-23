@@ -1,0 +1,30 @@
+def demonstrate_exception_handling():
+    examples = [
+        ("division_by_zero", lambda: 1 / 0),
+        ("index_error", lambda: [1, 2, 3][3]),
+        ("key_error", lambda: {'a': 1}['b']),
+        ("type_error", lambda: '1' + 1),
+        ("value_error", lambda: int('not_a_number')),
+    ]
+
+    for name, func in examples:
+        try:
+            print(f"Running {name} example:")
+            func()
+        except ZeroDivisionError as e:
+            print(f"ZeroDivisionError: {e}")
+        except IndexError as e:
+            print(f"IndexError: {e}")
+        except KeyError as e:
+            print(f"KeyError: {e}")
+        except TypeError as e:
+            print(f"TypeError: {e}")
+        except ValueError as e:
+            print(f"ValueError: {e}")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+        finally:
+            print(f"Finished running {name} example.\n")
+
+# Run the demonstration
+demonstrate_exception_handling()
